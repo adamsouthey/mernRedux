@@ -15,6 +15,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
+  "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -35,6 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:5000"
+  }
 }
