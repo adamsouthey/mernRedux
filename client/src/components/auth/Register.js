@@ -26,26 +26,7 @@ const Register = ({ setAlert }) => {
       console.log('Passwords do not match', formData);
       setAlert('Passwords do not match', 'danger');
     } else {
-      //   const newUser = {
-      //     name,
-      //     email,
-      //     password,
-      //     password2
-      //   };
-      //   try {
-      //     const config = {
-      //       header: {
-      //         'Content-Type': 'application/json'
-      //       },
-      //       body: newUser
-      //     };
-      //     const res = await axios.post('/api/users', newUser, config);
-      //     console.log(res.data);
-      //     return res.data;
-      //   } catch (err) {
-      //     console.error(err);
-      //   }
-      console.log('SUCCESS');
+      setAlert('Registration successful. Please now log in', 'success');
     }
   };
 
