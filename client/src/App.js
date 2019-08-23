@@ -9,7 +9,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 import './App.css';
-import { loadUser } from './actions/auth';
+import { loadUser, noToken } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 //Redux
@@ -22,7 +22,11 @@ if (localStorage.token) {
 //On refresh loadUser will run
 const App = () => {
   useEffect(() => {
-    store.dispatch(loadUser());
+    if (!localStorage.token) {
+      store.dispatch(noToken());
+    } else {
+      store.dispatch(loadUser());
+    }
   }, []);
 
   return (

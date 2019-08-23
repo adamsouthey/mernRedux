@@ -2,6 +2,7 @@ import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
   USER_LOADED,
+  NO_TOKEN,
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
@@ -36,6 +37,7 @@ export function auth(state = iniitalState, action) {
       };
     case REGISTER_FAIL:
     case AUTH_ERROR:
+    case NO_TOKEN:
     case LOGIN_FAIL:
     case LOGOUT:
       localStorage.removeItem('token');

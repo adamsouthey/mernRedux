@@ -4,6 +4,7 @@ import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
   USER_LOADED,
+  NO_TOKEN,
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
@@ -28,6 +29,14 @@ export const loadUser = () => async dispatch => {
     });
   }
 };
+
+//No Token in local storage
+export const noToken = () => dispatch => {
+  dispatch({
+    type: NO_TOKEN
+  });
+};
+
 // Register User
 export const register = ({ name, email, password }) => async dispatch => {
   const config = {
