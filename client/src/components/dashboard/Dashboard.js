@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
@@ -23,7 +24,13 @@ const Dashboard = ({
       {profile !== null ? (
         <Fragment>Has profile</Fragment>
       ) : (
-        <Fragment>No profile associated with this account</Fragment>
+        <Fragment>
+          No profile associated with this account, please create a profile below
+          <br />
+          <Link to='/create-profile' className='btn btn-primary my-1'>
+            Create Profile
+          </Link>
+        </Fragment>
       )}
     </Fragment>
   );
