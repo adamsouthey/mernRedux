@@ -16,6 +16,7 @@ import setAuthToken from './utils/setAuthToken';
 import { Provider } from 'react-redux';
 import store from './store';
 import CreateProfile from './components/profile-forms/CreateProfile';
+import EditProfile from './components/profile-forms/EditProfile';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -46,6 +47,11 @@ const App = () => {
                 exact
                 path='/create-profile'
                 component={CreateProfile}
+              />
+              <PrivateRoute
+                exact
+                path='/edit-profile'
+                component={EditProfile}
               />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
             </Switch>
