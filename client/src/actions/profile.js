@@ -53,3 +53,9 @@ export const createProfile = (
     });
   }
 };
+
+//Add an experience
+export const addExperience = () => async dispatch => {
+  try {
+  } catch (err) {}
+};
