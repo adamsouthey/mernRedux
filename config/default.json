@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://adam123:adam123@mernredux-fgwec.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "masupersecretTokenyWokenyWoo",
-  "githubClientId": "Iv1.26bfcc616f899519",
-  "githubSecret": "4caf3c452d72aad8f360e9c3b778e31147d87586"
-}
