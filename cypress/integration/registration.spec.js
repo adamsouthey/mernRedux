@@ -56,7 +56,7 @@ describe('Registration Page', () => {
     it('should add a new user on submit', () => {
       cy.server();
       cy.route('POST', '/api/users', {
-        name: 'Adam Southey',
+        name: 'Amazing Southey',
         email: 'amazingness@gmail.com',
         password: '123456'
       });
@@ -65,6 +65,7 @@ describe('Registration Page', () => {
       cy.get('input[name="password"]').type('123456');
       cy.get('input[name="password2"]').type('123456');
       cy.get('[data-cy=submit]').click();
+      cy.setLocalStoarge();
     });
   });
 });
