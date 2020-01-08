@@ -1,34 +1,47 @@
 {
-  "name": "MERN_Redux",
-  "version": "1.0.0",
-  "description": "MERN_Redux",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
-    "client": "cd client && yarn start",
-    "dev": "concurrently --names \"server,client\" \"yarn server --silent\" \"yarn client --silent\"",
-    "test": "cypress open",
-    "testCli": "cypress run",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
-  "author": "Adam Southey",
-  "license": "MIT",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "config": "^3.1.0",
-    "express": "^4.16.4",
-    "express-validator": "^5.3.1",
-    "gravatar": "^1.8.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.5.1",
-    "request": "^2.88.0"
-  },
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "cypress": "^3.4.1",
-    "nodemon": "^1.18.11",
-    "@testing-library/cypress": "^5.0.2",
-    "@testing-library/react": "^9.3.0"
-  }
+    "name": "MERN_Redux",
+    "version": "1.0.0",
+    "description": "MERN_Redux",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server",
+        "server": "nodemon server",
+        "client": "cd client && yarn start",
+        "dev": "concurrently --names \"server,client\" \"yarn server --silent\" \"yarn client --silent\"",
+        "test": "cypress open",
+        "testCli": "cypress run",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+        "format": "prettier-eslint --write \"{,!(node_modules)/**/}*.{js,jsx}\""
+    },
+    "author": "Adam Southey",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "config": "^3.1.0",
+        "express": "^4.16.4",
+        "express-validator": "^5.3.1",
+        "gravatar": "^1.8.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.5.1",
+        "request": "^2.88.0"
+    },
+    "devDependencies": {
+        "@testing-library/cypress": "^5.0.2",
+        "@testing-library/react": "^9.3.0",
+        "concurrently": "^4.1.0",
+        "cypress": "^3.4.1",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-react": "^7.17.0",
+        "nodemon": "^1.18.11",
+        "prettier": "^1.19.1",
+        "prettier-eslint-cli": "^5.0.0"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 8,
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 180
+    }
 }
