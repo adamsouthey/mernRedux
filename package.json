@@ -13,7 +13,7 @@
         "dev": "concurrently --names \"server,client\" \"yarn server --silent\" \"yarn client --silent\"",
         "test": "cypress open",
         "testCli": "cypress run",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && cd client && yarn run build "
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn run build "
     },
     "author": "Adam Southey",
     "license": "MIT",
