@@ -11,7 +11,7 @@ const Landing = ({ isAuthenticated }) => {
         <section className="landing">
             <div className="dark-overlay">
                 <div className="landing-inner">
-                    <h1 className="x-large">My App</h1>
+                    <h1 className="x-large">My Amazing App</h1>
                     <div className="buttons">
                         <Link className="btn btn-primary" to="/register">
                             Register
