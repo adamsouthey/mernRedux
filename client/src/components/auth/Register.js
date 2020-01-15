@@ -4,7 +4,6 @@ import { setAlert } from '../../actions/alert'
 import { register } from '../../actions/auth'
 import propTypes from 'prop-types'
 
-// import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom'
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
